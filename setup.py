@@ -19,14 +19,22 @@ class Database:
 
     def load_data(self):
         # Open excel book and read the content to the database
+        self.load_auth_users_automatically()
+        self.load_department_automatically()
         pass
 
     def reset_auth_users(self):
         # Drop the existing PROJECT.AUTH_USERS and recreate the table
+        self.conn.cursor().execute('DROP TABLE PROJECT.auth_user')
+        self.conn.cursor().execute('CREATE TABLE PROJECT.auth_user(USER_ID INTEGER, REG_NO VARCHAR(20), CAR_MODEL VARCHAR(20),NAME VARCHAR(40),PHONE_NO VARCHAR(15),DEPT_ID INTEGER)')
+        print(">>> auth_users has been reset to empty state")
         pass
 
     def reset_department(self):
         # Drop the existing PROJECT.DEPARTMENT and recreate the table
+        self.conn.cursor().execute('DROP TABLE PROJECT.department')
+        self.conn.cursor().execute('CREATE TABLE PROJECT.department(DEPT_ID INTEGER,DEPT_NAME VARCHAR(50))')
+        print(">>> department table has been reset to empty state")
         pass
 
     def load_auth_users_manually(self):
