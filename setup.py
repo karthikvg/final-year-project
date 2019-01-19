@@ -45,6 +45,14 @@ class Database:
         # Read the workbook sheet2 only to the database
         pass
 
+    def troubleshoot_problems(self):
+        # Check if the database is in working state or not
+        pass
 
-database=Database()
+    def resolve_problems(self):
+        # Resolve the problem associated to the database
+        pass
+
+
+database = Database()
 database.reset_database()
