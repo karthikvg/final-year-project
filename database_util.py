@@ -22,7 +22,7 @@ class Database:
     def load_data(self):
         # Open excel book and read the content to the database
         self.load_auth_users_automatically()
-        self.load_department_automatically()
+        #self.load_department_automatically()
         pass
 
     def reset_auth_users(self):

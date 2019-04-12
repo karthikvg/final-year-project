@@ -4,7 +4,7 @@ import smtplib
 
 msg=MIMEMultipart()
 msg['From']='saikumarhaw@gmail.com'
-msg['To']='saikumarhaw@gmail.com'
+msg['To']='karthikvg1998@gmail.com'
 msg['Subject']='Security Alert'
 
 

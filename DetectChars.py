@@ -349,10 +349,3 @@ def recognizeCharsInPlate(imgThresh, listOfMatchingChars):
         cv2.imshow("10", imgThreshColor)
 
     return strChars
-
-
-
-
-
-
-

@@ -17,8 +17,6 @@ def detectPlatesInScene(imgOriginalScene):
 
     height, width, numChannels = imgOriginalScene.shape
 
-    imgGrayscaleScene = np.zeros((height, width, 1), np.uint8)
-    imgThreshScene = np.zeros((height, width, 1), np.uint8)
     imgContours = np.zeros((height, width, 3), np.uint8)
 
     cv2.destroyAllWindows()
@@ -99,8 +97,6 @@ def detectPlatesInScene(imgOriginalScene):
 
         print("\nplate detection complete, click on any image and press a key to begin char recognition . . .\n")
         cv2.waitKey(0)
-
-
     return listOfPossiblePlates
 
 def findPossibleCharsInScene(imgThresh):
@@ -172,15 +168,3 @@ def extractPlate(imgOriginal, listOfMatchingChars):
     possiblePlate.imgPlate = imgCropped      
 
     return possiblePlate
-
-
-
-
-
-
-
-
-
-
-
-
