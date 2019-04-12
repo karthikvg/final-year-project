@@ -15,7 +15,7 @@ def email(number):
     msg.attach(MIMEText(body,'html'))
     server= smtplib.SMTP("smtp.gmail.com",587)
     server.starttls()
-    server.login(msg['From'],'Kar_123$')
+    server.login(msg['From'],'passwordgoeshere')
     server.sendmail(msg['From'],msg['To'],msg.as_string())
     server.quit()
 #email("karthik")
